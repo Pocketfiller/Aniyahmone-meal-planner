@@ -1,7 +1,3 @@
-# Aniyahmone-meal-planner
-Aniyah’s Meal Plan Website 
-<!DOCTYPE html>
-
 <html lang="en">
 
 <head>
