@@ -213,7 +213,7 @@ font-size:1.5rem;
 <!-- WEEK -->
 <section id="week1" class="week-card">
 
-<div class="week-title">📅 Week June 15th</div>
+<div class="week-title">Week June 15th</div>
 
 <!-- MONDAY -->
 <details open>
