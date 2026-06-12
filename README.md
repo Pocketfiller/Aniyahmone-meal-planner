@@ -19,12 +19,12 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#fff8fb,#ffeef5);
+background:linear-gradient(135deg,#fff9fb,#fff0f6,#fef6ff);
 min-height:100vh;
 color:#444;
 }
 
-/* TOP MENU */
+/* MENU BUTTON */
 .menu-btn{
 position:fixed;
 top:15px;
@@ -43,13 +43,14 @@ z-index:9999;
 box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
+/* DROPDOWN MENU */
 .dropdown-menu{
 position:fixed;
 top:0;
 left:-320px;
 width:280px;
 height:100%;
-background:#fff;
+background:#ffffff;
 padding:20px;
 transition:.3s;
 z-index:9998;
@@ -62,7 +63,7 @@ left:0;
 }
 
 .dropdown-menu h2{
-color:#ff6f9d;
+color:#ff5c8a;
 margin-bottom:15px;
 }
 
@@ -72,8 +73,8 @@ display:block;
 width:100%;
 padding:12px;
 margin-bottom:10px;
-background:#ffe0ec;
-color:#ff4f8b;
+background:#ffe6f0;
+color:#ff3f86;
 text-decoration:none;
 font-weight:600;
 border:none;
@@ -89,9 +90,9 @@ max-width:900px;
 margin:auto;
 }
 
-/* HERO */
+/* HOME ONLY */
 .hero{
-background:#fff;
+background:#ffffff;
 padding:25px;
 border-radius:20px;
 text-align:center;
@@ -100,7 +101,7 @@ box-shadow:0 5px 15px rgba(0,0,0,.05);
 
 .hero h1{
 font-size:2rem;
-color:#ff5c8a;
+color:#ff4f8b;
 margin-bottom:10px;
 }
 
@@ -112,7 +113,7 @@ color:#666;
 /* WEEK CARD */
 .week-card{
 margin-top:20px;
-background:#fff;
+background:#ffffff;
 padding:20px;
 border-radius:20px;
 box-shadow:0 5px 15px rgba(0,0,0,.05);
@@ -120,7 +121,7 @@ box-shadow:0 5px 15px rgba(0,0,0,.05);
 
 .week-title{
 font-size:1.5rem;
-color:#ff5c8a;
+color:#ff4f8b;
 font-weight:700;
 margin-bottom:15px;
 }
@@ -133,7 +134,7 @@ overflow:hidden;
 }
 
 summary{
-background:#ffe0ec;
+background:#ffe6f0;
 padding:14px;
 font-weight:700;
 cursor:pointer;
@@ -153,7 +154,7 @@ margin-bottom:10px;
 }
 
 .meal h3{
-color:#ff5c8a;
+color:#ff4f8b;
 margin-bottom:5px;
 font-size:1rem;
 }
@@ -164,21 +165,16 @@ line-height:1.6;
 color:#555;
 }
 
-/* SUNDAY CONGRATS */
+/* CONGRATS */
 .congrats{
-background:#ffd6e6;
+background:#ffe0ec;
 padding:20px;
 border-radius:15px;
 text-align:center;
 color:#ff2f78;
 }
 
-.congrats h2{
-font-size:1.8rem;
-margin-bottom:10px;
-}
-
-/* MOBILE FIX */
+/* MOBILE */
 @media(max-width:768px){
 .hero h1{
 font-size:1.5rem;
@@ -196,24 +192,22 @@ font-size:1.5rem;
 <div id="menu" class="dropdown-menu">
 <h2>💕 Meal Planner</h2>
 
-<a href="#home">🏠 Home</a>
+<a href="#home" onclick="closeMenu()">🏠 Home</a>
 
-<button class="week-btn" onclick="toggleWeeks()">
-📅 Weekly Plans
-</button>
+<button class="week-btn" onclick="toggleWeeks()">📅 Weekly Plans</button>
 
 <div id="weeks" style="display:none;">
-<a href="#week1">Week June 15</a>
+<a href="#week1" onclick="closeMenu()">Week June 15</a>
 </div>
 </div>
 
 <!-- MAIN -->
 <div class="main">
 
-<!-- HOME -->
+<!-- HOME ONLY -->
 <section id="home" class="hero">
 <h1>Welcome Aniyahmone 💖</h1>
-<p>Press the menu to access your weekly meal schedule.</p>
+<p>Open the menu to view your weekly meal plans.</p>
 <p>Stay consistent, stay hydrated, trust the process.</p>
 </section>
 
@@ -226,11 +220,10 @@ font-size:1.5rem;
 <details open>
 <summary>Monday</summary>
 <div class="day-content">
-
 <div class="meal">
 <h3>Breakfast</h3>
 Egg whites, whole egg, oatmeal, blueberries
-<div class="nutrition">315 cal | 25g protein | 30g carbs | 9g fat | 220mg sodium</div>
+<div class="nutrition">315 cal | 25g protein | 30g carbs | 9g fat</div>
 </div>
 
 <div class="meal">
@@ -244,7 +237,6 @@ Chicken breast, jasmine rice, zucchini
 Salmon, sweet potato, green beans
 <div class="nutrition">510 cal | 36g protein | 35g carbs | 20g fat</div>
 </div>
-
 </div>
 </details>
 
@@ -252,13 +244,9 @@ Salmon, sweet potato, green beans
 <details>
 <summary>Tuesday</summary>
 <div class="day-content">
-
-<div class="meal"><h3>Breakfast</h3>Turkey sausage, 2 eggs, strawberries<div class="nutrition">340 cal | 26g protein</div></div>
-
+<div class="meal"><h3>Breakfast</h3>Turkey sausage, eggs, strawberries<div class="nutrition">340 cal | 26g protein</div></div>
 <div class="meal"><h3>Lunch</h3>Pork tenderloin, brown rice, asparagus<div class="nutrition">450 cal | 40g protein</div></div>
-
-<div class="meal"><h3>Dinner</h3>Shrimp, jasmine rice, peppers<div class="nutrition">420 cal | 38g protein</div></div>
-
+<div class="meal"><h3>Dinner</h3>Shrimp, rice, peppers<div class="nutrition">420 cal | 38g protein</div></div>
 </div>
 </details>
 
@@ -266,13 +254,9 @@ Salmon, sweet potato, green beans
 <details>
 <summary>Wednesday</summary>
 <div class="day-content">
-
 <div class="meal"><h3>Breakfast</h3>Protein oats, eggs, pineapple<div class="nutrition">390 cal | 30g protein</div></div>
-
 <div class="meal"><h3>Lunch</h3>Ground turkey, sweet potato, spinach<div class="nutrition">450 cal | 38g protein</div></div>
-
 <div class="meal"><h3>Dinner</h3>Cod, rice, green beans<div class="nutrition">390 cal | 36g protein</div></div>
-
 </div>
 </details>
 
@@ -280,13 +264,9 @@ Salmon, sweet potato, green beans
 <details>
 <summary>Thursday</summary>
 <div class="day-content">
-
 <div class="meal"><h3>Breakfast</h3>Egg whites, turkey bacon, fruit<div class="nutrition">320 cal | 28g protein</div></div>
-
 <div class="meal"><h3>Lunch</h3>Chicken, sweet potato, cucumbers<div class="nutrition">430 cal | 42g protein</div></div>
-
 <div class="meal"><h3>Dinner</h3>Pork loin, rice, zucchini<div class="nutrition">470 cal | 40g protein</div></div>
-
 </div>
 </details>
 
@@ -294,13 +274,9 @@ Salmon, sweet potato, green beans
 <details>
 <summary>Friday</summary>
 <div class="day-content">
-
 <div class="meal"><h3>Breakfast</h3>Eggs, oats, strawberries<div class="nutrition">370 cal | 31g protein</div></div>
-
 <div class="meal"><h3>Lunch</h3>Ground turkey, rice, green beans<div class="nutrition">450 cal | 40g protein</div></div>
-
 <div class="meal"><h3>Dinner</h3>Salmon, sweet potato, spinach<div class="nutrition">500 cal | 36g protein</div></div>
-
 </div>
 </details>
 
@@ -308,13 +284,9 @@ Salmon, sweet potato, green beans
 <details>
 <summary>Saturday</summary>
 <div class="day-content">
-
 <div class="meal"><h3>Breakfast</h3>Turkey sausage, egg whites, pineapple<div class="nutrition">330 cal | 29g protein</div></div>
-
 <div class="meal"><h3>Lunch</h3>Chicken, rice, asparagus<div class="nutrition">440 cal | 42g protein</div></div>
-
 <div class="meal"><h3>Dinner</h3>Shrimp stir fry, rice, peppers<div class="nutrition">430 cal | 38g protein</div></div>
-
 </div>
 </details>
 
@@ -324,9 +296,7 @@ Salmon, sweet potato, green beans
 <div class="day-content">
 
 <div class="meal"><h3>Breakfast</h3>Eggs, oats, blueberries<div class="nutrition">320 cal | 20g protein</div></div>
-
 <div class="meal"><h3>Lunch</h3>Pork tenderloin, sweet potato<div class="nutrition">470 cal | 40g protein</div></div>
-
 <div class="meal"><h3>Dinner</h3>Chicken, rice, spinach<div class="nutrition">430 cal | 42g protein</div></div>
 
 <br>
@@ -334,7 +304,6 @@ Salmon, sweet potato, green beans
 <div class="congrats">
 <h2>🎉 YOU DID IT!!</h2>
 <p>Great job completing your week 💖</p>
-<p>Next week drops Sunday night.</p>
 </div>
 
 </div>
@@ -345,6 +314,7 @@ Salmon, sweet potato, green beans
 </div>
 
 <script>
+
 function toggleMenu(){
 document.getElementById("menu").classList.toggle("active");
 }
@@ -353,6 +323,11 @@ function toggleWeeks(){
 let w = document.getElementById("weeks");
 w.style.display = w.style.display === "block" ? "none" : "block";
 }
+
+function closeMenu(){
+document.getElementById("menu").classList.remove("active");
+}
+
 </script>
 
 </body>
